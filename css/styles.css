@@ -93,7 +93,7 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
   padding: 24px 0;
-  transition: color 450ms ease-in-out;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-item.active {
@@ -129,7 +129,7 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
   padding: 24px 0;
-  transition: color 450ms ease-in-out;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section {
@@ -177,7 +177,7 @@ img {
   border: none;
   border-radius: 4px;
   min-width: 169px;
-  transition: background-color 450ms ease-in-out;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -255,6 +255,8 @@ img {
   background-color: #ffffff;
   display: block;
   border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-item-card {
@@ -298,7 +300,7 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  transition: background-color 450ms ease-in-out;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-svg {
@@ -328,7 +330,7 @@ img {
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
-  transition: box-shadow 450ms ease-in-out;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover,
@@ -360,7 +362,7 @@ img {
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 500ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-card {
@@ -425,6 +427,7 @@ img {
   letter-spacing: 0.02em;
   color: #fff;
 }
+
 .footer .container {
   display: flex;
   gap: 120px;
@@ -448,7 +451,7 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  transition: background-color 450ms ease-in-out;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
