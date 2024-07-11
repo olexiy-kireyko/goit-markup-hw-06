@@ -74,7 +74,8 @@ img {
 .header-item:hover,
 .header-item:focus,
 .header-address-item:hover,
-.header-address-item:focus {
+.header-address-item:focus,
+.header-item.active {
   color: #404bbf;
 }
 
@@ -92,6 +93,22 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
   padding: 24px 0;
+  transition: color 450ms ease-in-out;
+}
+
+.header-item.active {
+  position: relative;
+}
+
+.active::after {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  content: "";
+  left: 0;
+  bottom: -1px;
 }
 
 .header-address {
@@ -112,6 +129,7 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
   padding: 24px 0;
+  transition: color 450ms ease-in-out;
 }
 
 .section {
@@ -120,7 +138,14 @@ img {
 }
 
 .hero {
-  background-color: #2e2f42;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/herobackground.jpg);
+  background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -152,6 +177,7 @@ img {
   border: none;
   border-radius: 4px;
   min-width: 169px;
+  transition: background-color 450ms ease-in-out;
 }
 
 .hero-button:hover,
@@ -181,12 +207,22 @@ img {
   width: calc((100% - 72px) / 4);
 }
 
+.values-icon {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background-color: #f4f4fd;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+}
+
 .values-item-head {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-top: 8px;
   margin-bottom: 8px;
 }
 
@@ -242,6 +278,38 @@ img {
   text-align: center;
 }
 
+.team-social {
+  display: flex;
+  gap: 24px;
+  padding-top: 8px;
+  justify-content: center;
+}
+
+.team-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.team-social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: background-color 450ms ease-in-out;
+}
+
+.team-social-svg {
+  fill: white;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: #404bbf;
+}
+
 .portfolio-head {
   font-size: 36px;
   line-height: 1.11;
@@ -251,6 +319,7 @@ img {
   text-transform: capitalize;
   margin-bottom: 72px;
 }
+
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -259,6 +328,39 @@ img {
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 450ms ease-in-out;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.portfolio-box-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  padding: 40px 32px 0;
+  background-color: #4d5ae5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 500ms ease-in-out;
 }
 
 .portfolio-item-card {
@@ -310,4 +412,50 @@ img {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   width: 264px;
+}
+.footer-social {
+  width: 208px;
+}
+
+.footer-social-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.footer .container {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: background-color 450ms ease-in-out;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: #31d0aa;
+}
+
+.footer-social-svg {
+  fill: white;
 }
